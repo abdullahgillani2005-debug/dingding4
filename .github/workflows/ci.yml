@@ -34,6 +34,11 @@ jobs:
       env:
         CI: true
 
+    - name: Generate Prisma Client
+      run: npm run db:generate
+      env:
+        DATABASE_URL: postgresql://test:test@localhost:5432/test
+
     - name: Build application
       run: npm run build
       env:
@@ -57,3 +62,4 @@ jobs:
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
         vercel-args: '--prod'
+        working-directory: ./

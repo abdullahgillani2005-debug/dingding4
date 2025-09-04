@@ -15,5 +15,12 @@
     "STRIPE_PUBLISHABLE_KEY": "@stripe_publishable_key",
     "STRIPE_SECRET_KEY": "@stripe_secret_key",
     "STRIPE_WEBHOOK_SECRET": "@stripe_webhook_secret"
+  },
+  "build": {
+    "env": {
+      "NEXTAUTH_URL": "@nextauth_url",
+      "NEXTAUTH_SECRET": "@nextauth_secret",
+      "DATABASE_URL": "@database_url"
+    }
   }
 }
